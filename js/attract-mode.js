@@ -58,6 +58,9 @@ class AttractMode {
             ]
         };
         
+        // Système de scores locaux
+        this.highScores = this.loadHighScores();
+        
         this.init();
     }
     
@@ -276,7 +279,7 @@ class AttractMode {
         ctx.fillText('🏆 MEILLEURS SCORES 🏆', width / 2, height * 0.15);
         
         // Récupération des scores
-        const scores = this.game.getScores();
+        const scores = this.getHighScores();
         
         ctx.font = '28px monospace';
         ctx.fillStyle = '#FFF';
@@ -428,6 +431,52 @@ class AttractMode {
     
     get currentScreenName() {
         return this.currentScreen;
+    }
+    
+    // Système de gestion des scores
+    loadHighScores() {
+        try {
+            const saved = localStorage.getItem('shibaRush_highScores');
+            return saved ? JSON.parse(saved) : [];
+        } catch (e) {
+            console.warn('Erreur lors du chargement des scores:', e);
+            return [];
+        }
+    }
+    
+    saveHighScores() {
+        try {
+            localStorage.setItem('shibaRush_highScores', JSON.stringify(this.highScores));
+        } catch (e) {
+            console.warn('Erreur lors de la sauvegarde des scores:', e);
+        }
+    }
+    
+    isHighScore(score) {
+        if (this.highScores.length < 10) {
+            return true;
+        }
+        return score > this.highScores[this.highScores.length - 1].score;
+    }
+    
+    addHighScore(score, name = 'PLAYER', distance = 0) {
+        const newScore = {
+            score: score,
+            name: name,
+            distance: distance,
+            date: new Date().toISOString()
+        };
+        
+        this.highScores.push(newScore);
+        this.highScores.sort((a, b) => b.score - a.score);
+        this.highScores = this.highScores.slice(0, 10);
+        
+        this.saveHighScores();
+        return this.highScores.indexOf(newScore) + 1;
+    }
+    
+    getHighScores() {
+        return [...this.highScores];
     }
 }
 

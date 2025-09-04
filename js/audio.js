@@ -75,11 +75,7 @@ class AudioManager {
     generateTone(frequency, duration, type = 'square', envelope = null) {
         if (!this.isEnabled || !this.audioContext) return null;
         
-        const cacheKey = `${frequency}_${duration}_${type}`;
-        if (this.soundCache.has(cacheKey)) {
-            return this.soundCache.get(cacheKey);
-        }
-        
+        // Créer de nouveaux oscillateurs à chaque fois (pas de cache pour éviter l'erreur start())
         const oscillator = this.audioContext.createOscillator();
         const gainNode = this.audioContext.createGain();
         
@@ -101,10 +97,7 @@ class AudioManager {
         
         oscillator.connect(gainNode);
         
-        const sound = { oscillator, gainNode, duration };
-        this.soundCache.set(cacheKey, sound);
-        
-        return sound;
+        return { oscillator, gainNode, duration };
     }
     
     // Sons d'effets spéciaux

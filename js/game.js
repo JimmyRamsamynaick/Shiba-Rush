@@ -139,49 +139,73 @@ class ShibaRush {
     }
     
     init() {
+        console.log('🔧 Initialisation du jeu Shiba Rush...');
+        
         // Configuration du canvas
         this.canvas.width = this.width;
         this.canvas.height = this.height;
+        console.log('🖼️ Canvas configuré:', this.width, 'x', this.height);
         
         // Initialisation des systèmes
+        console.log('🎮 Initialisation arcade config...');
         this.arcadeConfig.init();
+        
+        console.log('🔊 Initialisation audio manager...');
         this.audioManager.init();
+        
+        console.log('🌍 Initialisation environment manager...');
         this.environmentManager.init();
+        
+        console.log('👘 Initialisation costume manager...');
         this.costumeManager.init();
+        
+        console.log('⚡ Initialisation performance optimizer...');
         this.performanceOptimizer.init();
+        
+        console.log('🎪 Initialisation attract mode...');
         this.attractMode.init();
         
         // Configuration des contrôles
         this.setupControls();
         
         // Démarrage de la boucle de jeu
+        console.log('🔄 Démarrage de la boucle de jeu...');
         this.gameLoop();
+        
+        console.log('✅ Shiba Rush initialisé avec succès!');
     }
     
     setupControls() {
+        console.log('🎮 Configuration des contrôles...');
         // Gestion des événements arcade
         this.arcadeConfig.setupInputHandlers((input, pressed) => {
             if (!pressed) return;
             
+            console.log('🕹️ Input arcade:', input, 'État du jeu:', this.gameState);
             // Réinitialiser le timer d'inactivité à chaque interaction
             this.inactivityTimer = 0;
             
             if (this.gameState === 'attract') {
+                console.log('🚪 Sortie du mode attract vers menu (arcade)');
                 // Sortir du mode attract avec n'importe quelle entrée
                 this.gameState = 'menu';
                 this.attractMode.stop();
             } else if (this.gameState === 'playing') {
                 switch(input) {
                     case 'P1_BUTTON1':
+                        console.log('🦘 Saut (arcade)!');
                         this.jump();
                         break;
                     case 'P1_BUTTON2':
+                        console.log('💨 Dash (arcade)!');
                         this.dash();
                         break;
                     case 'P1_DOWN':
+                        console.log('🏃 Glissade (arcade)!');
                         this.slide();
                         break;
                     case 'P1_UP':
+                        console.log('⭐ Action spéciale (arcade)!');
                         this.specialAction();
                         break;
                 }
@@ -190,10 +214,12 @@ class ShibaRush {
         
         // Gestion des événements clavier pour les tests
         document.addEventListener('keydown', (e) => {
+            console.log('⌨️ Touche pressée:', e.code, 'État du jeu:', this.gameState);
             // Réinitialiser le timer d'inactivité à chaque interaction
             this.inactivityTimer = 0;
             
             if (this.gameState === 'attract') {
+                console.log('🚪 Sortie du mode attract vers menu');
                 // Sortir du mode attract avec n'importe quelle touche
                 this.gameState = 'menu';
                 this.attractMode.stop();
@@ -202,6 +228,7 @@ class ShibaRush {
             
             if (this.gameState === 'menu') {
                 if (e.code === 'Space' || e.code === 'Enter') {
+                    console.log('🎯 Démarrage du jeu depuis le menu');
                     this.startGame();
                 }
                 return;
@@ -211,19 +238,23 @@ class ShibaRush {
                 switch(e.code) {
                     case 'Space':
                         e.preventDefault();
+                        console.log('🦘 Saut!');
                         this.jump();
                         break;
                     case 'ShiftLeft':
                     case 'ShiftRight':
                         e.preventDefault();
+                        console.log('💨 Dash!');
                         this.dash();
                         break;
                     case 'ArrowDown':
                         e.preventDefault();
+                        console.log('🏃 Glissade!');
                         this.slide();
                         break;
                     case 'ArrowUp':
                         e.preventDefault();
+                        console.log('⭐ Action spéciale!');
                         this.specialAction();
                         break;
                 }
@@ -231,6 +262,7 @@ class ShibaRush {
             
             if (this.gameState === 'gameOver') {
                 if (e.code === 'Space' || e.code === 'Enter') {
+                    console.log('🔄 Redémarrage du jeu');
                     this.restartGame();
                 }
             }
@@ -238,6 +270,7 @@ class ShibaRush {
     }
     
     startGame() {
+        console.log('🚀 Démarrage du jeu!');
         this.gameState = 'playing';
         this.score = 0;
         this.distance = 0;
@@ -257,9 +290,11 @@ class ShibaRush {
         this.dashCooldown = 0;
         
         // Réinitialiser l'environnement
+        console.log('🌍 Réinitialisation de l\'environnement');
         this.environmentManager.reset();
         
         // Démarrer la musique
+        console.log('🎵 Démarrage de la musique de fond');
         this.audioManager.startBackgroundMusic();
     }
     
@@ -547,13 +582,18 @@ class ShibaRush {
     }
     
     gameOver() {
+        console.log('🎮 Game Over - Score:', this.score, 'Distance:', Math.floor(this.distance));
         this.gameState = 'gameOver';
         this.audioManager.playSound('gameOver');
         this.audioManager.stopBackgroundMusic();
         
         // Vérifier si c'est un high score
-        if (this.isHighScore(this.score)) {
-            this.addHighScore(this.score, 'PLAYER');
+        console.log('🏆 Vérification high score...');
+        if (this.attractMode && this.attractMode.isHighScore(this.score)) {
+            console.log('🎉 Nouveau high score!', this.score);
+            this.attractMode.addHighScore(this.score, 'PLAYER', Math.floor(this.distance));
+        } else {
+            console.log('📊 Score normal:', this.score);
         }
         
         // Sauvegarder les scores et statistiques
@@ -565,6 +605,7 @@ class ShibaRush {
         // Programmer le retour au mode attract après 10 secondes
         setTimeout(() => {
             if (this.gameState === 'gameOver') {
+                console.log('⏰ Retour automatique au mode attract');
                 this.startAttractMode();
             }
         }, 10000);
