@@ -1,241 +1,197 @@
-# 🐕 SHIBA RUSH - 柴犬ラッシュ
+<div align="center">
 
-*Un jeu d'arcade endless runner inspiré de Tokyo avec notre adorable Shiba Inu !*
+# 🐕 SHIBA RUSH 🌸
 
-## 🌸 À propos du jeu
+<img src="https://media.giphy.com/media/3o7TKSjRrfIPjeiVyM/giphy.gif" width="200" alt="Running Shiba Inu">
 
-**Shiba Rush** est un jeu d'arcade endless runner optimisé pour les bornes d'arcade japonaises. Incarnez un adorable Shiba Inu qui court à travers les environnements emblématiques de Tokyo, collectant des pièces et évitant les obstacles dans une aventure sans fin !
+### *L'aventure ultime du Shiba Inu dans un monde de cerisiers en fleurs*
 
-### 🎮 Caractéristiques principales
+<img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cherry%20blossom/3D/cherry_blossom_3d.png" width="50"> <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Dog/3D/dog_3d.png" width="50"> <img src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Cherry%20blossom/3D/cherry_blossom_3d.png" width="50">
 
-- **🏃‍♂️ Gameplay fluide** : Sautez, glissez et dashez à travers Tokyo
-- **🌆 Environnements japonais authentiques** :
-  - 🏙️ **Shibuya** - Le cœur urbain de Tokyo
-  - ⛩️ **Temple** - Sanctuaires traditionnels paisibles
-  - 🌲 **Forêt de bambous** - Nature mystique japonaise
-  - 🎌 **Festival Matsuri** - Célébrations colorées
-- **👘 Système de costumes** : Débloquez des tenues adorables pour votre Shiba
-- **🏆 Mode Attract** : Démonstration AI avec tableau des scores
-- **⚡ Optimisé arcade** : Performance optimale sur hardware limité
-- **🎵 Audio immersif** : Musiques et effets sonores thématiques
+[![Jouer maintenant](https://img.shields.io/badge/🎮_JOUER_MAINTENANT-FF6B6B?style=for-the-badge&logoColor=white)](http://localhost:8000)
+[![Version](https://img.shields.io/badge/Version-1.0.0-4ECDC4?style=for-the-badge)]()
+[![Statut](https://img.shields.io/badge/Statut-Prêt_à_jouer-51CF66?style=for-the-badge)]()
 
-## 🕹️ Contrôles
+</div>
 
-### Contrôles Arcade (JAMMA)
-- **Bouton 1** : Saut
-- **Bouton 2** : Dash
-- **Joystick Bas** : Glissade
-- **Joystick Haut** : Action spéciale (changement d'environnement)
+---
 
-### Contrôles Clavier
-- **Espace** : Saut
-- **Shift** : Dash
-- **Flèche Bas** : Glissade
-- **Flèche Haut** : Action spéciale
+## 🎯 À propos du jeu
 
-## 🎯 Objectifs
+<img align="right" src="https://media.giphy.com/media/l0HlNQ03J5JxX6lva/giphy.gif" width="300" alt="Cherry Blossoms">
 
-- 🏃‍♂️ Courez le plus loin possible
-- 🪙 Collectez un maximum de pièces
-- 🏆 Battez votre meilleur score
-- 👘 Débloquez tous les costumes
-- 🌍 Explorez tous les environnements
+**Shiba Rush** est un jeu de course infinie où vous incarnez un adorable Shiba Inu courant à travers des paysages japonais enchanteurs. Évitez les obstacles, collectez des objets et battez vos records dans cette aventure kawaii !
 
-## 🛠️ Architecture technique
+### ✨ Caractéristiques principales
 
-### Structure du projet
-```
-Shiba-Rush/
-├── index.html              # Point d'entrée principal
-├── js/
-│   ├── game.js            # Logique principale du jeu
-│   ├── arcade-config.js   # Configuration arcade JAMMA
-│   ├── arcade-ui.js       # Interface utilisateur arcade
-│   ├── attract-mode.js    # Mode attract avec AI
-│   ├── audio.js           # Gestionnaire audio
-│   ├── costumes.js        # Système de costumes
-│   ├── environments.js    # Environnements japonais
-│   ├── performance-optimizer.js # Optimisations performance
-│   └── sprites.js         # Gestionnaire de sprites
-└── README.md              # Ce fichier
-```
+- 🏃‍♂️ **Gameplay fluide** : Contrôles réactifs et physique réaliste
+- 🎨 **Costumes personnalisables** : Débloquez différents looks pour votre Shiba
+- 🌸 **Environnements japonais** : Paysages inspirés du Japon traditionnel
+- 🎵 **Audio immersif** : Effets sonores et musique d'ambiance
+- 🏆 **Système de scores** : Battez vos records et ceux de vos amis
+- 🤖 **Mode Attract** : Démo automatique avec IA
 
-### Spécifications techniques
-- **Résolution** : 720x480 (compatible 480p/720p)
-- **Framerate** : 60 FPS
-- **Input** : Compatible JAMMA (Joystick + 2 boutons)
-- **Audio** : Stéréo, optimisé pour haut-parleurs arcade
-- **Performance** : Object pooling, culling, batch rendering
+---
+
+## 🎮 Comment jouer
+
+<div align="center">
+<img src="https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif" width="400" alt="Gaming">
+</div>
+
+### 🕹️ Contrôles
+
+| Action | Clavier | Arcade |
+|--------|---------|--------|
+| **Sauter** | `Espace` / `↑` | `Bouton 1` |
+| **Glisser** | `↓` / `S` | `Bouton 2` |
+| **Dash** | `Shift` / `D` | `Bouton 3` |
+| **Action spéciale** | `Ctrl` / `A` | `Bouton 4` |
+| **Pause** | `P` | `Start` |
+
+### 🎯 Objectifs
+
+- 🏃 Courez le plus loin possible
+- 💎 Collectez des objets pour augmenter votre score
+- 🚧 Évitez les obstacles et les pièges
+- 🏆 Débloquez de nouveaux costumes
+- 📈 Améliorez vos performances
+
+---
 
 ## 🚀 Installation et lancement
 
-### Prérequis
-- Navigateur web moderne (Chrome, Firefox, Safari)
-- Serveur HTTP local
+<img align="right" src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" width="200" alt="Rocket">
 
-### Lancement rapide
+### 📋 Prérequis
+
+- Navigateur web moderne (Chrome, Firefox, Safari, Edge)
+- Serveur HTTP local (Python, Node.js, ou autre)
+
+### 🔧 Installation
+
 ```bash
-# Cloner le projet
-git clone [repository-url]
-cd Shiba-Rush
+# Cloner le repository
+git clone https://github.com/votre-username/shiba-rush.git
 
-# Lancer un serveur HTTP local
+# Aller dans le dossier
+cd shiba-rush
+
+# Lancer un serveur local
 python3 -m http.server 8000
 # ou
 npx serve .
 # ou
 php -S localhost:8000
-
-# Ouvrir dans le navigateur
-open http://localhost:8000
 ```
 
-## 🎨 Thème et esthétique
+### 🌐 Accès
 
-### Palette de couleurs
-- **🌸 Rose Sakura** : `#FFB7C5` - Douceur japonaise
-- **🟡 Jaune Shiba** : `#D2691E` - Couleur du pelage
-- **🔵 Bleu Tokyo** : `#1E90FF` - Modernité urbaine
-- **🟢 Vert Bambou** : `#228B22` - Nature traditionnelle
-- **🔴 Rouge Torii** : `#DC143C` - Spiritualité
-
-### Inspirations
-- **Shibuya Crossing** - L'énergie urbaine de Tokyo
-- **Temples Sensoji** - La tradition millénaire
-- **Parc Ueno** - La nature en ville
-- **Festivals Matsuri** - La joie collective
-- **Shiba Inu** - L'adorable mascotte japonaise
-
-## 🏆 Système de scores
-
-### Calcul du score
-- **Distance parcourue** : 1 point par pixel
-- **Pièces collectées** : 10 points par pièce
-- **Changement d'environnement** : 50 points bonus
-- **Multiplicateurs d'environnement** : Jusqu'à x2
-
-### Tableau des scores
-- **🥇 Top 10** des meilleurs scores
-- **📊 Statistiques** : Distance, pièces, temps
-- **💾 Sauvegarde locale** persistante
-
-## 🎮 Mode Attract
-
-Le mode attract se déclenche automatiquement après 30 secondes d'inactivité :
-- **🤖 IA de démonstration** : Gameplay automatique
-- **🏆 Affichage des high scores** : Top 10 des joueurs
-- **📋 Instructions** : Guide des contrôles
-- **🎵 Musique d'ambiance** : Thème principal
-
-## 🔧 Optimisations performance
-
-### Techniques implémentées
-- **Object Pooling** : Réutilisation des objets
-- **Frustum Culling** : Rendu sélectif
-- **Batch Rendering** : Optimisation du rendu
-- **Adaptive Quality** : Ajustement automatique
-- **Garbage Collection** : Nettoyage périodique
-
-### Métriques en temps réel
-- **FPS** : Images par seconde
-- **Objets rendus** : Compteur d'éléments
-- **Niveau de qualité** : Adaptation automatique
-
-## 🎵 Audio
-
-### Musiques
-- **🎼 Thème principal** : Mélodie entraînante
-- **🌸 Ambiance Shibuya** : Rythme urbain
-- **⛩️ Sérénité Temple** : Calme traditionnel
-- **🌲 Mystère Forêt** : Nature apaisante
-- **🎌 Joie Festival** : Célébration festive
-
-### Effets sonores
-- **🐕 Aboiements Shiba** : Expressions adorables
-- **🪙 Collecte pièces** : Satisfaction immédiate
-- **💨 Dash** : Vitesse et puissance
-- **⚠️ Collision** : Feedback d'impact
-
-## 👘 Système de costumes
-
-### Costumes disponibles
-- **🐕 Classique** : Le Shiba naturel
-- **👘 Kimono** : Élégance traditionnelle
-- **🥷 Ninja** : Furtivité et agilité
-- **🌸 Sakura** : Beauté printanière
-- **🎌 Festival** : Joie matsuri
-- **⛩️ Moine** : Sagesse spirituelle
-
-### Déblocage
-- **🪙 Achat avec pièces** collectées
-- **🏆 Récompenses de score** pour les meilleurs
-- **🎯 Défis spéciaux** à accomplir
-
-## 🌟 Fonctionnalités avancées
-
-### Environnements dynamiques
-- **🌅 Cycle jour/nuit** : Ambiances changeantes
-- **🌦️ Effets météo** : Pluie, neige, soleil
-- **🎆 Événements spéciaux** : Feux d'artifice, festivals
-- **🏗️ Obstacles uniques** par environnement
-
-### Particules et effets
-- **✨ Traînées de dash** : Effet de vitesse
-- **🌸 Pétales de sakura** : Ambiance poétique
-- **💫 Collecte de pièces** : Feedback visuel
-- **💥 Impacts** : Retour tactile
-
-## 🐛 Débogage
-
-### Console de développement
-- **F12** : Ouvrir les outils développeur
-- **Console** : Messages de débogage
-- **Performance** : Métriques temps réel
-- **Network** : Chargement des ressources
-
-### Logs utiles
-```javascript
-// Afficher les métriques de performance
-console.log(game.performanceOptimizer.getMetrics());
-
-// Vérifier l'état du jeu
-console.log(game.gameState);
-
-// Déboguer l'audio
-console.log(game.audioManager.isEnabled);
-```
-
-## 🤝 Contribution
-
-Ce projet est ouvert aux contributions ! Voici comment participer :
-
-1. **🍴 Fork** le projet
-2. **🌿 Créer** une branche feature
-3. **💻 Développer** votre fonctionnalité
-4. **✅ Tester** soigneusement
-5. **📤 Soumettre** une pull request
-
-### Domaines d'amélioration
-- **🎨 Nouveaux environnements** japonais
-- **👘 Costumes additionnels** pour Shiba
-- **🎵 Musiques originales** thématiques
-- **🏆 Modes de jeu** alternatifs
-- **📱 Adaptation mobile** responsive
-
-## 📄 Licence
-
-Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
-
-## 🙏 Remerciements
-
-- **🐕 Communauté Shiba Inu** : Inspiration adorable
-- **🇯🇵 Culture japonaise** : Richesse esthétique
-- **🎮 Arcade classique** : Héritage du gaming
-- **🌸 Tokyo** : Ville inspirante
-- **👥 Développeurs** : Passion du code
+Ouvrez votre navigateur et allez sur : `http://localhost:8000`
 
 ---
 
-*Fait avec ❤️ pour les amoureux des Shiba Inu et de la culture japonaise*
+## 🎨 Captures d'écran
 
-**がんばって！(Ganbatte!) - Bonne chance dans votre course !** 🐕🏃‍♂️✨
+<div align="center">
+
+### 🏠 Écran d'accueil
+<img src="https://via.placeholder.com/600x400/FF6B6B/FFFFFF?text=Shiba+Rush+Menu" alt="Menu principal">
+
+### 🎮 Gameplay
+<img src="https://via.placeholder.com/600x400/4ECDC4/FFFFFF?text=Gameplay+Action" alt="Gameplay">
+
+### 🏆 Scores
+<img src="https://via.placeholder.com/600x400/51CF66/FFFFFF?text=High+Scores" alt="Tableau des scores">
+
+</div>
+
+---
+
+## 🛠️ Technologies utilisées
+
+<div align="center">
+
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" width="60" alt="HTML5">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" width="60" alt="CSS3">
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" width="60" alt="JavaScript">
+
+</div>
+
+- **HTML5 Canvas** : Rendu graphique haute performance
+- **JavaScript ES6+** : Logique de jeu moderne
+- **Web Audio API** : Système audio avancé
+- **CSS3** : Interface utilisateur responsive
+
+---
+
+## 🌸 Thème japonais
+
+<div align="center">
+<img src="https://media.giphy.com/media/l0HlPystfePnAI3G8/giphy.gif" width="500" alt="Japanese Theme">
+</div>
+
+Le jeu s'inspire de la culture japonaise avec :
+
+- 🌸 **Sakura** : Pétales de cerisiers qui tombent
+- 🏯 **Architecture** : Éléments de design traditionnel
+- 🎌 **Esthétique** : Palette de couleurs harmonieuse
+- 🐕 **Shiba Inu** : La star incontestée du jeu !
+
+---
+
+## 🤝 Contribution
+
+<img align="right" src="https://media.giphy.com/media/du3J3cXyzhj75IOgvA/giphy.gif" width="200" alt="Collaboration">
+
+Les contributions sont les bienvenues ! Pour contribuer :
+
+1. 🍴 Forkez le projet
+2. 🌿 Créez une branche (`git checkout -b feature/AmazingFeature`)
+3. 💾 Commitez vos changements (`git commit -m 'Add AmazingFeature'`)
+4. 📤 Poussez vers la branche (`git push origin feature/AmazingFeature`)
+5. 🔄 Ouvrez une Pull Request
+
+---
+
+## 📄 Licence
+
+<div align="center">
+
+**🚫 UTILISATION COMMERCIALE INTERDITE 🚫**
+
+<img src="https://img.shields.io/badge/Licence-Non_Commercial-red?style=for-the-badge" alt="Non Commercial License">
+
+Ce projet est sous licence personnalisée qui **INTERDIT** la vente ou l'utilisation commerciale.
+
+Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+
+</div>
+
+---
+
+## 🎉 Remerciements
+
+<div align="center">
+
+<img src="https://media.giphy.com/media/3oz8xIsloV7zOmt81G/giphy.gif" width="300" alt="Thank you">
+
+**Merci à tous ceux qui ont rendu ce projet possible !**
+
+🐕 Inspiré par l'amour universel des Shiba Inu  
+🌸 Dédié aux amoureux de la culture japonaise  
+🎮 Créé avec passion pour la communauté gaming  
+
+</div>
+
+---
+
+<div align="center">
+
+### 🌟 Si vous aimez ce projet, n'hésitez pas à lui donner une étoile ! 🌟
+
+<img src="https://media.giphy.com/media/l0HlHFRbmaZtBRhXG/giphy.gif" width="100" alt="Star">
+
+**Fait avec ❤️ et beaucoup de ☕**
+
+</div>

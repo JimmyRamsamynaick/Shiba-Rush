@@ -186,10 +186,16 @@ class ShibaRush {
             this.inactivityTimer = 0;
             
             if (this.gameState === 'attract') {
-                console.log('🚪 Sortie du mode attract vers menu (arcade)');
-                // Sortir du mode attract avec n'importe quelle entrée
-                this.gameState = 'menu';
-                this.attractMode.stop();
+                if (input === 'P1_BUTTON1' || input === 'P1_START') {
+                    console.log('🎯 Démarrage direct du jeu depuis attract mode (arcade)');
+                    this.attractMode.stop();
+                    this.startGame();
+                } else {
+                    console.log('🚪 Sortie du mode attract vers menu (arcade)');
+                    // Sortir du mode attract avec d'autres entrées
+                    this.gameState = 'menu';
+                    this.attractMode.stop();
+                }
             } else if (this.gameState === 'playing') {
                 switch(input) {
                     case 'P1_BUTTON1':
@@ -219,10 +225,16 @@ class ShibaRush {
             this.inactivityTimer = 0;
             
             if (this.gameState === 'attract') {
-                console.log('🚪 Sortie du mode attract vers menu');
-                // Sortir du mode attract avec n'importe quelle touche
-                this.gameState = 'menu';
-                this.attractMode.stop();
+                if (e.code === 'Space' || e.code === 'Enter') {
+                    console.log('🎯 Démarrage direct du jeu depuis attract mode');
+                    this.attractMode.stop();
+                    this.startGame();
+                } else {
+                    console.log('🚪 Sortie du mode attract vers menu');
+                    // Sortir du mode attract avec d'autres touches
+                    this.gameState = 'menu';
+                    this.attractMode.stop();
+                }
                 return;
             }
             
